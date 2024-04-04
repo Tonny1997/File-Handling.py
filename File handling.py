@@ -5,37 +5,37 @@ def create_file():
             file.write("This is line 1\n")
             file.write("12345\n")
             file.write("Another line with a mix of text and numbers: 9876\n")
-        print("File created successfully.")
+        print("File is created.")
     except PermissionError:
-        print("Permission denied to create the file.")
-    except Exception as e:
-        print("An error occurred:", e)
+        print("File not created.")
+    except Exception as makosa:
+        print("This an error:", makosa)
 
 
 # File Reading and Display
 def read_file():
     try:
         with open("my_file.txt", 'r') as file:
-            content = file.read()
-            print("File content:\n", content)
+            Information = file.read()
+            print("File content:\n", Information)
     except FileNotFoundError:
-        print("File not found.")
-    except Exception as e:
-        print("An error occurred:", e)
+        print("File empty.")
+    except Exception as makosa:
+        print("Caused an Error:", makosa)
 
 
 # File Appending
 def append_file():
     try:
         with open("my_file.txt", 'a') as file:
-            file.write("Appending line 1\n")
-            file.write("Appending line 2\n")
-            file.write("Appending line 3\n")
-        print("File appended successfully.")
+            file.write("This an append 1\n")
+            file.write("This an append 2\n")
+            file.write("This an append 3\n")
+        print("File appended.")
     except PermissionError:
-        print("Permission denied to append to the file.")
-    except Exception as e:
-        print("An error occurred:", e)
+        print("File cannot be opened")
+    except Exception as makosa:
+        print("Caused an error:", makosa)
 
 
 if __name__ == "__main__":
